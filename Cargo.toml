@@ -1,3 +1,10 @@
 [workspace]
 resolver = "3"
-members = ["data_types","guessing_game","hello_world", "hello_world_cargo", "variables"]
+members = [
+    "data_types",
+    "guessing_game",
+    "hello_world",
+    "hello_world_cargo",
+    "variables",
+    "structs",
+    "enums"]
