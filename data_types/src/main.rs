@@ -1,5 +1,4 @@
-fn main()
-{
+fn main() {
     let guess: u32 = "42".parse().expect("Not a number!");
 
     let x = 5;
@@ -21,8 +20,7 @@ fn main()
     tuples();
 }
 
-fn tuples()
-{
+fn tuples() {
     let tp = (4, 5, 6);
 
     println!("tp: {:?}", tp);
