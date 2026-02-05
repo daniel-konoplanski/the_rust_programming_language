@@ -24,6 +24,17 @@ impl Message {
     }
 }
 
+fn division(number: i32) -> Option<u32>
+{
+    if number == 0
+    {
+        return Option::<u32>::None;
+    }
+
+    return Option::Some(number.isqrt().try_into().unwrap());
+}
+
+
 fn main() {
     let ip = IpAddrKind::V4((127, 0, 0, 1));
 
