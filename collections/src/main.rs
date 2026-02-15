@@ -25,4 +25,16 @@ fn main() {
     for i in &mut v {
         *i += 50;
     }
+
+    let mut vec1 = Vec::<&i32>::new();
+
+    let some_var1 = 32;
+    let some_var2 = 33;
+
+    vec1.push(&some_var1);
+
+    let some_var1 = "a";
+    let some_var2 = "b";
+
+    println!("{}", vec1[0]);
 }
