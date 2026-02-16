@@ -31,4 +31,7 @@ fn main()
 
     println!("indexing: {}", indexing.len());
     println!("hello: {}", hello.len());
+
+    let chars = hello.chars();
+    println!("{:?}", chars);
 }
