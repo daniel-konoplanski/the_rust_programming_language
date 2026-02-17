@@ -1,19 +1,22 @@
 use core::num;
 
 #[derive(Debug)] // so we can inspect the state in a minute
-enum UsState {
+enum UsState
+{
     Alabama,
     Alaska,
 }
 
-enum Coin {
+enum Coin
+{
     Penny,
     Nickel,
     Dime,
     Quarter(UsState),
 }
 
-fn value_in_cents(coin: Coin) -> u8 {
+fn value_in_cents(coin: Coin) -> u8
+{
     match coin {
         Coin::Penny => {
             println!("Lucky penny!");
@@ -28,7 +31,8 @@ fn value_in_cents(coin: Coin) -> u8 {
     }
 }
 
-fn add_one(number: Option<i32>) -> Option<i32> {
+fn add_one(number: Option<i32>) -> Option<i32>
+{
     let result = match number {
         None => None,
         Some(value) => Some(value + 1),
@@ -37,7 +41,8 @@ fn add_one(number: Option<i32>) -> Option<i32> {
     return result;
 }
 
-fn main() {
+fn main()
+{
     println!("{}", value_in_cents(Coin::Quarter(UsState::Alabama)));
 
     println!("{:?}", add_one(Some(10)));

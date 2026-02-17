@@ -3,9 +3,10 @@
 // vowel have hay added to the end instead (apple becomes apple-hay).
 // Keep in mind the details about UTF-8 encoding!
 
-const VOWELS: [char; 6]= ['a', 'e', 'i', 'o', 'u', 'y'];
+const VOWELS: [char; 6] = ['a', 'e', 'i', 'o', 'u', 'y'];
 
-fn to_pig_latin(sentence: &str) -> String {
+fn to_pig_latin(sentence: &str) -> String
+{
     let words = sentence.split_whitespace();
 
     let mut pig_latin = String::new();
@@ -19,15 +20,12 @@ fn to_pig_latin(sentence: &str) -> String {
 
         let is_vowel = VOWELS.contains(&first_letter);
 
-        if is_vowel
-        {
+        if is_vowel {
             pig_latin += &format!("{word}-hay ");
-        }
-        else
-        {
+        } else {
             pig_latin += &format!("{}-{}ay ", &word[1..], first_letter);
         }
-    };
+    }
 
     return pig_latin.trim().to_string();
 }

@@ -1,4 +1,5 @@
-fn main() {
+fn main()
+{
     let mut vec = Vec::<i32>::new();
 
     vec.push(5);

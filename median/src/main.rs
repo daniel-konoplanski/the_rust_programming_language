@@ -4,7 +4,8 @@
 
 use std::collections::HashMap;
 
-fn median(vec: &[i32]) -> f32 {
+fn median(vec: &[i32]) -> f32
+{
     let len = vec.len();
     let mid = len / 2;
 
@@ -15,13 +16,14 @@ fn median(vec: &[i32]) -> f32 {
     }
 }
 
-fn mode(vec: &[i32]) -> i32{
+fn mode(vec: &[i32]) -> i32
+{
     let mut map = HashMap::new();
 
     for i in vec {
         let count = map.entry(i).or_insert(0);
         *count += 1;
-    };
+    }
 
     let (key, _) = map.iter().max_by_key(|(_, v)| *v).unwrap();
 

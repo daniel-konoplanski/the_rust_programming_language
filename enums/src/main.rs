@@ -1,20 +1,28 @@
 #[derive(Debug)]
-enum IpAddrKind {
+enum IpAddrKind
+{
     V4((u8, u8, u8, u8)),
     V6(String),
 }
 
 use std::net::{IpAddr, Ipv4Addr, Ipv6Addr};
 
-enum Message {
+enum Message
+{
     Quit,
-    Move { x: i32, y: i32 },
+    Move
+    {
+        x: i32,
+        y: i32,
+    },
     Write(String),
     ChangeColor(i32, i32, i32),
 }
 
-impl Message {
-    fn call(&self) {
+impl Message
+{
+    fn call(&self)
+    {
         match self {
             Message::Quit => println!("Quitting..."),
             Message::Move { x, y } => println!("Moving to ({}, {})", x, y),
@@ -24,7 +32,8 @@ impl Message {
     }
 }
 
-fn division(number: i32) -> Option<u32> {
+fn division(number: i32) -> Option<u32>
+{
     if number == 0 {
         return Option::<u32>::None;
     }
@@ -32,7 +41,8 @@ fn division(number: i32) -> Option<u32> {
     return Option::Some(number.isqrt().try_into().unwrap());
 }
 
-fn main() {
+fn main()
+{
     let ip = IpAddrKind::V4((127, 0, 0, 1));
 
     println!("ip: {:?}", ip);

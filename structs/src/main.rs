@@ -1,19 +1,24 @@
 #[derive(Debug)]
-struct Rectangle {
+struct Rectangle
+{
     width: u32,
     height: u32,
 }
 
-impl Rectangle {
-    fn area(&self) -> u32 {
+impl Rectangle
+{
+    fn area(&self) -> u32
+    {
         return self.width * self.height;
     }
 
-    fn width(&self) -> u32 {
+    fn width(&self) -> u32
+    {
         return self.width;
     }
 
-    fn can_hold(&self, rec: &Rectangle) -> bool {
+    fn can_hold(&self, rec: &Rectangle) -> bool
+    {
         if self.width > rec.width && self.height > rec.height {
             return true;
         }
@@ -21,7 +26,8 @@ impl Rectangle {
         return false;
     }
 
-    fn square(side: u32) -> Self {
+    fn square(side: u32) -> Self
+    {
         return Self {
             width: side,
             height: side,
@@ -29,7 +35,8 @@ impl Rectangle {
     }
 }
 
-fn main() {
+fn main()
+{
     let rect1 = Rectangle {
         width: 30,
         height: 50,

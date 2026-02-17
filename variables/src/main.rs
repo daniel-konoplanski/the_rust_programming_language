@@ -1,4 +1,5 @@
-fn main() {
+fn main()
+{
     const TIME: u32 = 60 * 8 * 20;
 
     println!("{TIME}");

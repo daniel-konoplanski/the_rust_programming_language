@@ -1,4 +1,5 @@
-fn main() {
+fn main()
+{
     let greeting_msg = "Hello there";
     let msg_str = greeting_msg.to_string();
 
