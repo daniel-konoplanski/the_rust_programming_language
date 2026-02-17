@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 
-fn main()
-{
+fn main() {
     let mut map = HashMap::new();
 
     map.insert(String::from("X"), 21);
@@ -12,8 +11,7 @@ fn main()
         map.insert(weronika, 23);
     }
 
-    for (name, age) in &map
-    {
+    for (name, age) in &map {
         println!("name: {name}, age: {age}");
     }
 

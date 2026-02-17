@@ -3,7 +3,7 @@ fn main() {
 
     vec.push(5);
 
-    let vec2 = vec!(1, 2, 3, 4, 5, 6);
+    let vec2 = vec![1, 2, 3, 4, 5, 6];
 
     println!("{:?}", vec);
     println!("{:?}", vec2);
