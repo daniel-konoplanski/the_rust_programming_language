@@ -1,6 +1,12 @@
-use std::{error, fs::File, io::{Read, Write}};
+use std::{
+    error,
+    fs::File,
+    io::ErrorKind,
+    io::{Read, Write},
+};
 
-fn main() {
+fn example1()
+{
     let greeting_file_result = File::open("hello.txt");
 
     let Ok(mut file) = greeting_file_result else {
@@ -22,4 +28,33 @@ fn main() {
         println!("{line_number}: {line}");
         line_number += 1;
     }
+}
+
+fn example2()
+{
+    let greeting_file_result = File::open("hello.txt");
+
+    let greeting_file = match greeting_file_result {
+        Ok(file) => file,
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("hello.txt") {
+                Ok(fc) => fc,
+                Err(e) => panic!("Problem creating the file: {e:?}"),
+            },
+            _ => {
+                panic!("Problem opening the file: {error:?}");
+            }
+        },
+    };
+
+    let greeting_file = File::open("hello.txt").unwrap();
+
+    let greeting_file = File::open("hello.txt")
+        .expect("hello.txt should be included in this project");
+}
+
+fn main()
+{
+    // example1();
+    example2();
 }
