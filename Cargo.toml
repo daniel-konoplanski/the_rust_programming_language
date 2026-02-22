@@ -7,4 +7,4 @@ members = [
     "hello_world_cargo",
     "variables",
     "structs",
-    "enums", "slices", "tuples", "pattern_matching", "collections", "strings", "hashmap", "panic", "median", "pig_latin", "department", "result"]
+    "enums", "slices", "tuples", "pattern_matching", "collections", "strings", "hashmap", "panic", "median", "pig_latin", "department", "result", "generics"]
