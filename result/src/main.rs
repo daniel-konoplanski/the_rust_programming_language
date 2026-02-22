@@ -51,11 +51,12 @@ fn example2()
 
     let greeting_file = File::open("hello.txt").unwrap();
 
-    let greeting_file = File::open("hello.txt")
-        .expect("hello.txt should be included in this project");
+    let greeting_file =
+        File::open("hello.txt").expect("hello.txt should be included in this project");
 }
 
-fn read_username_from_file() -> Result<String, io::Error> {
+fn read_username_from_file() -> Result<String, io::Error>
+{
     let username_file_result = File::open("hello.txt");
 
     let mut username_file = match username_file_result {
