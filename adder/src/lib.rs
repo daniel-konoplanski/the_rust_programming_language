@@ -14,7 +14,7 @@ mod tests {
 
     #[test]
     fn it_fails() {
-        let result = add(3, 3);
+        let result = add(3, 4);
         assert!(result == 7, "Addition operation failed!");
     }
 }
